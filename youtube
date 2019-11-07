@@ -1,0 +1,28 @@
+#!/bin/bash
+echo "Devam etmek istediğiniz dili seçiniz : "
+echo "1) Türkçe
+2) English"
+read secim
+
+case "$secim" in
+
+	1)
+		echo "Lütfen URL Giriniz : "
+		read url
+		youtube-dl -F $url
+		echo "Lütfen İndirmek İstediğiniz Formatın Kodunu Giriniz : "
+		read format
+		youtube-dl -f $format $url
+		;;
+	2)
+		echo "Please Enter URL : "
+		read url
+		youtube-dl -F $url
+		echo "Please Enter The Format Code You Want To Download : "
+		read format
+		youtube-dl -f $format $url
+		;;
+esac
+
+
+
