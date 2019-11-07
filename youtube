@@ -14,6 +14,7 @@ case "$secim" in
 		read format
 		youtube-dl -f $format $url
 		;;
+
 	2)
 		echo "Please Enter URL : "
 		read url
